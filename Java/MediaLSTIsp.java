@@ -40,7 +40,8 @@ class AudioPlayer implements iAudioPlayer {
 class CameraStreamPlayer implements iCameraStreamPlayer {
     private boolean liveStarted = false;
     private boolean playing = false;
-    @Override public void play(String source) {
+    @Override
+    public void play(String source) {
         // Surprise: needs streamLive first for “real” play
         if (!liveStarted) {
             streamLive(source);
